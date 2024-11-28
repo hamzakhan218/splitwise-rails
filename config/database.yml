@@ -84,8 +84,9 @@ production:
   primary: &primary_production
     <<: *default
     database: splitwise_production
-    username: splitwise
-    password: <%= ENV["SPLITWISE_DATABASE_PASSWORD"] %>
+    username: postgres
+    password: postgres
+    host: localhost
   cache:
     <<: *primary_production
     database: splitwise_production_cache
